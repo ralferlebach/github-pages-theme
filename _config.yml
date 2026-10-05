@@ -1,0 +1,28 @@
+title: "GitHub Projects"
+description: "Project documentation by Dr. Ralf Erlebach"
+lang: de
+
+owner:
+  name: "Dr. Ralf Erlebach"
+  tagline: "Lerntechnologien & Technologisches Lernen"
+  url: "https://www.ralferlebach.de/"
+
+brand:
+  primary: "#162033"
+  accent: "#0d6f73"
+  accent_hover: "#09565a"
+  surface: "#f5f7f8"
+
+navigation:
+  - label: "Homepage"
+    url: "https://www.ralferlebach.de/"
+  - label: "GitHub"
+    url: "https://github.com/ralferlebach"
+
+markdown: kramdown
+highlighter: rouge
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - examples

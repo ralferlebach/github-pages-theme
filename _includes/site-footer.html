@@ -1,0 +1,22 @@
+{%- assign owner_name = site.owner.name | default: "Dr. Ralf Erlebach" -%}
+{%- assign owner_url = site.owner.url | default: "https://www.ralferlebach.de/" -%}
+
+<footer class="site-footer">
+  <div class="content-shell footer-shell">
+    <p>
+      <a href="{{ owner_url }}">{{ owner_name }}</a>
+      <span aria-hidden="true"> · </span>
+      <span>Projekt- und Entwicklungsdokumentation</span>
+    </p>
+
+    {%- if site.footer_links and site.footer_links.size > 0 %}
+    <nav aria-label="Fußnavigation">
+      <ul class="footer-links">
+        {%- for item in site.footer_links %}
+        <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+    {%- endif %}
+  </div>
+</footer>

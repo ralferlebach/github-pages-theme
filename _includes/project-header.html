@@ -1,0 +1,52 @@
+{%- assign repo_url = site.repository_url -%}
+{%- if repo_url == nil or repo_url == "" -%}
+  {%- if site.github and site.github.repository_url -%}
+    {%- assign repo_url = site.github.repository_url -%}
+  {%- endif -%}
+{%- endif -%}
+
+<section class="project-header" aria-labelledby="project-name">
+  <div class="content-shell project-header__inner">
+    <div class="project-header__copy">
+      <p class="eyebrow">{{ site.project.kind | default: "Open-source project" }}</p>
+      <p id="project-name" class="project-name">{{ site.title | default: "Project documentation" }}</p>
+
+      {%- if site.project.tagline %}
+      <p class="project-tagline">{{ site.project.tagline }}</p>
+      {%- elsif site.description %}
+      <p class="project-tagline">{{ site.description }}</p>
+      {%- endif %}
+
+      {%- if site.project %}
+      <ul class="meta-list" aria-label="Projektmetadaten">
+        {%- if site.project.status %}
+        <li>{{ site.project.status }}</li>
+        {%- endif %}
+        {%- if site.project.license %}
+        <li>{{ site.project.license }}</li>
+        {%- endif %}
+        {%- if site.project.moodle %}
+        <li>Moodle {{ site.project.moodle }}</li>
+        {%- endif %}
+        {%- if site.project.php %}
+        <li>PHP {{ site.project.php }}</li>
+        {%- endif %}
+      </ul>
+      {%- endif %}
+    </div>
+
+    <div class="project-actions" aria-label="Projektlinks">
+      {%- if repo_url %}
+      <a class="button button--primary" href="{{ repo_url }}">GitHub Repository</a>
+      {%- endif %}
+
+      {%- if site.project.marketplace_url %}
+      <a class="button button--secondary" href="{{ site.project.marketplace_url }}">Moodle Marketplace</a>
+      {%- endif %}
+
+      {%- if site.project.documentation_url %}
+      <a class="button button--secondary" href="{{ site.project.documentation_url }}">Dokumentation</a>
+      {%- endif %}
+    </div>
+  </div>
+</section>

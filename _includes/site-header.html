@@ -1,0 +1,25 @@
+{%- assign owner_name = site.owner.name | default: "Dr. Ralf Erlebach" -%}
+{%- assign owner_tagline = site.owner.tagline | default: "Lerntechnologien & Technologisches Lernen" -%}
+{%- assign owner_url = site.owner.url | default: "https://www.ralferlebach.de/" -%}
+
+<header class="site-header">
+  <div class="header-shell">
+    <div class="identity">
+      <a class="identity__name" href="{{ owner_url }}">{{ owner_name }}</a>
+      <p class="identity__tagline">{{ owner_tagline }}</p>
+    </div>
+
+    <nav class="site-nav" aria-label="Hauptnavigation">
+      <ul>
+        {%- if site.navigation and site.navigation.size > 0 -%}
+          {%- for item in site.navigation -%}
+          <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+          {%- endfor -%}
+        {%- else -%}
+          <li><a href="https://www.ralferlebach.de/">Homepage</a></li>
+          <li><a href="https://github.com/ralferlebach">GitHub</a></li>
+        {%- endif -%}
+      </ul>
+    </nav>
+  </div>
+</header>

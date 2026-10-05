@@ -1,0 +1,48 @@
+# Theme
+remote_theme: ralferlebach/github-pages-theme@main
+
+plugins:
+  - jekyll-remote-theme
+
+# Project identity
+title: "Moodle ViMiPad Plugin-Familie"
+description: "Kollaborative und interaktive Medien- und Notizfunktionen für Moodle."
+lang: de
+
+# Recommended for GitHub metadata and local builds.
+repository: "ralferlebach/Moodle-ViMiPad-Plugins"
+
+# Important for a GitHub Project Page.
+baseurl: "/Moodle-ViMiPad-Plugins"
+
+owner:
+  name: "Dr. Ralf Erlebach"
+  tagline: "Lerntechnologien & Technologisches Lernen"
+  url: "https://www.ralferlebach.de/"
+
+project:
+  kind: "Moodle Plugin-Familie"
+  tagline: "Kollaborative und interaktive Medien- und Notizfunktionen für Moodle."
+  status: "Aktive Entwicklung"
+  license: "GPL-3.0-or-later"
+  # moodle: "4.5+"
+  # php: "8.1+"
+  # marketplace_url: "https://marketplace.moodle.com/plugins/..."
+  # documentation_url: "https://..."
+
+navigation:
+  - label: "Homepage"
+    url: "https://www.ralferlebach.de/"
+  - label: "GitHub"
+    url: "https://github.com/ralferlebach"
+
+# Optional: change all project pages centrally by changing the theme defaults.
+# These values are only needed when this project should deviate.
+# brand:
+#   primary: "#162033"
+#   accent: "#0d6f73"
+#   accent_hover: "#09565a"
+#   surface: "#f5f7f8"
+
+markdown: kramdown
+highlighter: rouge

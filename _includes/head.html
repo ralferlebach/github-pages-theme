@@ -1,0 +1,17 @@
+{%- assign page_title = page.title | default: site.title -%}
+{%- assign description = page.description | default: site.description -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="{{ site.brand.primary | default: '#162033' }}">
+
+<title>
+  {%- if page_title -%}{{ page_title | escape }} · {% endif -%}
+  {{ site.owner.name | default: "Dr. Ralf Erlebach" | escape }}
+</title>
+
+{%- if description %}
+<meta name="description" content="{{ description | strip_html | strip_newlines | escape }}">
+{%- endif %}
+
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">

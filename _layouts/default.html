@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'de' }}">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
+  {% include site-header.html %}
+  {% include project-header.html %}
+
+  <main id="main-content" class="site-main" tabindex="-1">
+    <div class="content-shell">
+      <article class="prose">
+        {{ content }}
+      </article>
+    </div>
+  </main>
+
+  {% include site-footer.html %}
+</body>
+</html>
